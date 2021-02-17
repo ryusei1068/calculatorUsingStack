@@ -110,13 +110,9 @@ class DoubleStack
 
 double calculation(CharStack* st1, DoubleStack* st2)
 {   
-    double total = 0;
     double num2 = st2->pop()->data;
-    if (st2->peek() != NULL)
-    {
-        double num1 = st2->pop()->data;
-        total = st1->peek()->data == '*' ? num1 * num2 : st1->peek()->data == '/' ? num1 / num2 : st1->peek()->data == '^' ? pow(num1, num2) : st1->peek()->data == '+' ? num1 + num2 : num1 - num2;
-    }
+    double num1 = st2->pop()->data;
+    double total = st1->peek()->data == '*' ? num1 * num2 : st1->peek()->data == '/' ? num1 / num2 : st1->peek()->data == '^' ? pow(num1, num2) : st1->peek()->data == '+' ? num1 + num2 : num1 - num2;
     st1->pop();
     return total;
 }
@@ -182,5 +178,7 @@ int main()
     cout << calculator("10+20+(30*20+3)*4/40") << endl;
     cout << calculator("34+5/10+2*(3/4+5)") << endl;
     cout << calculator("1+4*7-1") << endl;
+    cout << calculator("2^3") << endl;
+    
     return 0;
 }
