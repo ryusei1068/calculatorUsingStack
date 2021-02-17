@@ -179,6 +179,7 @@ int main()
     cout << calculator("34+5/10+2*(3/4+5)") << endl;
     cout << calculator("1+4*7-1") << endl;
     cout << calculator("2^3") << endl;
+    cout << calculator("2^3+4+50/25*40+3-2") << endl;
     
     return 0;
 }
