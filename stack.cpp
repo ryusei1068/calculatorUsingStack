@@ -177,7 +177,8 @@ double calculator(string str)
     return operandStack->pop()->data;
 }
 
-int main(){
+int main()
+{
     cout << calculator("10+20+(30*20+3)*4/40") << endl;
     cout << calculator("34+5/10+2*(3/4+5)") << endl;
     cout << calculator("1+4*7-1") << endl;
